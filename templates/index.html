@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta
+      name="ZAKA AI"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>ZAKA AI</title>
+
+    <!-- slider stylesheet -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css"
+    />
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="./static/bootstrap.css" />
+
+    <!-- fonts style -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins|Raleway:400,600|Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom styles for this template -->
+    <link href="./static/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="./static/responsive.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="hero_area">
+      <!-- header section strats -->
+      <header class="header_section">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container">
+            <a class="navbar-brand" href="index.html">
+              <span>
+                ZAKA AI
+              </span>
+            </a>
+
+            <div class="navbar-collapse" id="">
+              <div
+                class="d-none d-lg-flex ml-auto flex-column flex-lg-row align-items-center mt-3"
+              >
+                
+                <ul class="navbar-nav  mr-5">
+                  <li class="nav-item mr-5">
+                    <a class="nav-link" href="service.html">
+                      <span>Github Repo of this App</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+            
+              <div id="myNav" class="overlay">
+                <div class="overlay-content">
+                  <a href="index.html">Home</a>
+                  <a href="about.html">About</a>
+                  <a href="feature.html">Features</a>
+                  <a href="contact.html">Contact Us</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- end header section -->
+      <!-- slider section -->
+      <section class=" slider_section position-relative">
+        <div class="container">
+          <div
+            id="carouselExampleControls"
+            class="carousel slide"
+            data-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="slider_item-box">
+                  <div class="slider_item-container">
+                    <div class="slider_item-detail">
+                      <h1>
+                        Improve your elevator pitch by describing the speaking fluency and emotions
+                      </h1>
+                      <p>
+                        Our model recieves a URL of your uploaded pitch on Youtube, <br>
+                        and provides you with unique insights about your voice's emotions and language fluency
+                      </p>
+                      <div>
+                        <!-- <a href="">
+                          Download
+                        </a> -->
+                            <form action="{{ url_for('predict')}}"method="post">
+                        <input type="text" name="English Sentence" style="width: 210px ;" placeholder="Put your Youtube URL here" required="required" />
+
+                          <br><br>
+                        <button type="submit"  class="btn btn-primary btn-block btn-large">Extract Features and wait for results downthere </button>
+                            </form>
+
+                      </div>
+                    </div>
+                    <div class="slider_item-imgbox">
+                      <img src="./static/images/vooo.jpeg" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        </div>
+       
+        
+      </section>
+      <!-- end slider section -->
+    </div>
+
+    <!-- about section -->
+
+    <section class="about_section layout_padding">
+      <div class="container">
+        <h2 class="text-uppercase">
+Results        </h2>
+      </div>
+
+      <div class="container">
+        <div class="about_card-container layout_padding2-top">
+          <div class="about_card">
+            <div class="about-detail">
+              <div class="about_img-container">
+                <div class="about_img-box">
+                  <img src="./static/images/18_learning_fluency.jpeg" alt="" />
+                </div>
+              </div>
+              <div class="card_detail-ox">
+                <h4>
+                  FLUENCY
+                </h4>
+                <p>
+                  Results will be shown here
+                </p>
+                {{fluency_prediction_text_0}} <br>
+               {{fluency_prediction_text_1 }}<br>
+                {{fluency_prediction_text_2 }}<br>
+                {{fluency_prediction_text_3 }}
+
+              </div>
+            </div>
+          </div>
+          <div class="about_card">
+            <div class="about-detail">
+              <div class="about_img-container">
+                <div class="about_img-box">
+                  <img src="./static/images/Emotions.png" alt="" />
+                </div>
+              </div>
+              <div class="card_detail-ox">
+                <h4>
+                  EMOTIONS
+                </h4>
+                <p>
+                  Results will be shown here
+                </p>
+                {{emotion_prediction_text_0}} <br>
+               {{emotion_prediction_text_1 }}<br>
+                {{emotion_prediction_text_2 }}<br>
+                {{emotion_prediction_text_3}} <br>
+               {{emotion_prediction_text_4 }}<br>
+                {{emotion_prediction_text_5 }}<br>
+                {{emotion_prediction_text_6}}<br>
+                {{emotion_prediction_text_7}}
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- end about section -->
+
+    <!-- who section -->
+    
+
+    <!-- end who section -->
+
+    <!-- end contact section -->
+
+    <!-- info section -->
+
+    <!-- end info section -->
+
+    <!-- footer section -->
+    <section class="container-fluid footer_section">
+      <p>
+        &copy; 2022 All Rights Reserved. 
+        <a href="https://html.design/"></a>
+      </p>
+    </section>
+    <!-- footer section -->
+
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+
+    <script>
+      function openNav() {
+        document.getElementById("myNav").classList.toggle("menu_width");
+        document
+          .querySelector(".custom_menu-btn")
+          .classList.toggle("menu_btn-style");
+      }
+    </script>
+  </body>
+</html>
